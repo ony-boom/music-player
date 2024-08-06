@@ -1,0 +1,6 @@
+# Please make sure that env variable exist if using theme
+musicDir = "$HOME/Music"
+# musicDir = "/home/jhonDoe/Music"
+
+[server]
+port = 7600
