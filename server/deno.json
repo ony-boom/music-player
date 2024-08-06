@@ -4,14 +4,8 @@
   "version": "0.0.1",
   "imports": {
     "@db": "./db/mod.ts",
-    "@routes": "./routes",
-    "@handlers": "./handlers",
-    "node-id3": "npm:node-id3",
-    "@audio": "./audio/mod.ts",
-    "@config": "./config/mod.ts",
     "hono": "jsr:@hono/hono@^4.5.3",
-    "@std/uuid": "jsr:@std/uuid@^0.224.0",
-    "@std/toml": "jsr:@std/toml@^0.224.0",
+    "kv-toolbox": "jsr:@kitsonk/kv-toolbox@^0.18.0",
     "zod": "https://deno.land/x/zod@v3.16.1/mod.ts"
   }
 }

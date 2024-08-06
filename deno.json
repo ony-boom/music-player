@@ -1,12 +1,15 @@
 {
-  "workspace": ["./server", "./client"],
+  "workspace": ["./server", "./client", "./audio"],
   "version": "0.0.1",
   "tasks": {
-    "dev:server": "deno run -A server/main.ts"
+    "dev:server": "deno run --unstable-worker-options -A server/main.ts"
   },
   "imports": {
+    "@config": "./config/mod.ts",
     "@std/fs": "jsr:@std/fs@^0.224.0",
-    "@std/path": "jsr:@std/path@^0.224.0"
+    "@std/path": "jsr:@std/path@^0.224.0",
+    "@std/toml": "jsr:@std/toml@^0.224.0",
+    "@std/uuid": "jsr:@std/uuid@^0.224.0"
   },
   "unstable": ["kv"],
 
