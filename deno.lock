@@ -331,16 +331,12 @@
       "jsr:@std/uuid@^0.224.0"
     ],
     "members": {
-      "audio": {
-        "dependencies": [
-          "npm:fast-glob",
-          "npm:node-id3"
-        ]
-      },
       "server": {
         "dependencies": [
           "jsr:@hono/hono@^4.5.3",
-          "jsr:@kitsonk/kv-toolbox@^0.18.0"
+          "jsr:@kitsonk/kv-toolbox@^0.18.0",
+          "npm:fast-glob",
+          "npm:node-id3"
         ]
       }
     }

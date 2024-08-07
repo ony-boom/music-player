@@ -1,9 +1,0 @@
-{
-  "name": "@music-player/audio",
-  "version": "0.0.1",
-  "exports": "./mod.ts",
-  "imports": {
-    "node-id3": "npm:node-id3",
-    "fast-glob": "npm:fast-glob"
-  }
-}

@@ -1,8 +1,8 @@
+import * as audio from "@audio";
 import * as cli from "@std/cli";
 import * as path from "@std/path";
 import * as uuid from "@std/uuid";
 import { configDir } from "@config";
-import * as audio from "@music-player/audio";
 import { set as setBlob } from "kv-toolbox/blob";
 import { NAMESPACE_URL } from "@std/uuid/constants";
 
@@ -19,19 +19,22 @@ export const init = async () => {
     "firstStart",
   ];
 
-  /* const isFirstLaunch = Boolean((await kv.get<boolean>(firstLaunchKey)).value);
+  const isFirstLaunch = Boolean((await kv.get<boolean>(firstLaunchKey)).value);
 
   if (!isFirstLaunch) {
     return;
-  } */
+  }
   const spinner = new cli.Spinner();
   spinner.start();
   audio.load({
     async forEachAudio({ audioFile, audioTag, index, total }) {
-      const id = await genId(audioTag.title ?? audioFile.name);
+      const trackId = await genId(audioTag.title ?? audioFile.name);
+      const artists = audioTag.artist?.split(/,|, /g).map((artist) =>
+        genId(artist)
+      ) || [];
 
-      await kv.set(["track", id], {
-        id,
+      await kv.set(["track", trackId], {
+        id: trackId,
         playCount: 0,
         path: audioFile.path,
         genre: audioTag.genre,
@@ -46,8 +49,8 @@ export const init = async () => {
 
       await setBlob(
         kv,
-        ["cover", id],
-        new Blob([image], { type: "image/jpeg" }),
+        ["cover", trackId],
+        new Blob([image ?? ""], { type: "image/jpeg" }),
       );
 
       spinner.message = `Loaded ${index} of ${total}`;

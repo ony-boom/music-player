@@ -1,5 +1,5 @@
 {
-  "workspace": ["./server", "./client", "./audio"],
+  "workspace": ["./server", "./client"],
   "version": "0.0.1",
   "tasks": {
     "dev:server": "deno run --unstable-worker-options -A server/main.ts"

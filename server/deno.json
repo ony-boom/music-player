@@ -4,6 +4,9 @@
   "version": "0.0.1",
   "imports": {
     "@db": "./db/mod.ts",
+		"@audio": "./audio/mod.ts",
+		"node-id3": "npm:node-id3",
+		"fast-glob": "npm:fast-glob",
     "hono": "jsr:@hono/hono@^4.5.3",
     "kv-toolbox": "jsr:@kitsonk/kv-toolbox@^0.18.0",
     "zod": "https://deno.land/x/zod@v3.16.1/mod.ts"
