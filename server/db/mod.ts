@@ -13,6 +13,7 @@ const genId = (data: string) =>
   );
 
 export const init = async () => {
+	
   const firstLaunchKey = [
     "servers",
     "state",
@@ -21,9 +22,9 @@ export const init = async () => {
 
   const isFirstLaunch = Boolean((await kv.get<boolean>(firstLaunchKey)).value);
 
-  if (!isFirstLaunch) {
-    return;
-  }
+  // if (!isFirstLaunch) {
+  //   return;
+  // }
   const spinner = new cli.Spinner();
   spinner.start();
   audio.load({
