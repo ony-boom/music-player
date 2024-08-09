@@ -1,6 +1,5 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import "./config/init";
 
 const isValidTarget = (targetLike?: string): targetLike is Target => {
   return (
