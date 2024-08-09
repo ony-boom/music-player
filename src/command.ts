@@ -17,11 +17,7 @@ const handleRun = (target?: string) => {
     process.exit(1);
   }
 
-  const targetApp = target ?? "server and client";
-
-  Bun.env.DATABASE_URL = "poop";
-
-  console.log(`Running ${targetApp} with env ${Bun.env}`);
+  // const targetApp = target ?? "server and client";
 };
 
 yargs(hideBin(process.argv))
