@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Music player server",
+  "files": [
+    "package.json"
+  ],
+  "dependencies": {
+    "@getcronit/pylon": "*",
+    "@getcronit/pylon-builder": "*",
+    "@getcronit/pylon-server": "*"
+  },
+  "devDependencies": {
+    "@getcronit/pylon-cli": "*",
+    "commitizen": "^4.2.5",
+    "prisma": "^5.18.0"
+  },
+  "scripts": {
+    "develop": "bun run pylon develop",
+    "build": "bun run pylon build"
+  }
+}
