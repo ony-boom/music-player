@@ -8,12 +8,18 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/yargs": "^17.0.33",
-    "commitizen": "^4.2.5"
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "yargs": "^17.7.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
