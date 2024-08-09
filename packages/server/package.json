@@ -13,7 +13,6 @@
   },
   "devDependencies": {
     "@getcronit/pylon-cli": "*",
-    "commitizen": "^4.2.5",
     "prisma": "^5.18.0"
   },
   "scripts": {
